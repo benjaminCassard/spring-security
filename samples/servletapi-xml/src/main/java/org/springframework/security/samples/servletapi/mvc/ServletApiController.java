@@ -106,6 +106,7 @@ public class ServletApiController {
 			@ModelAttribute LoginForm loginForm, BindingResult result)
 			throws ServletException {
 		try {
+			System.out.println("OUT : "+loginForm.getUsername());
 			request.login(loginForm.getUsername(), loginForm.getPassword());
 		}
 		catch (ServletException authenticationFailed) {
